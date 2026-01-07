@@ -207,10 +207,12 @@
             background: white;
             border-radius: 32px;
             width: 100%;
-            max-width: 340px;
-            padding: 40px 32px;
+            max-width: 360px;
+            padding: 32px 24px;
             transform: scale(0.9);
             transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         #qr-modal.active .modal-content {
@@ -253,16 +255,35 @@
     <!-- QR Modal -->
     <div id="qr-modal">
         <div class="modal-content text-center">
-            <div id="qrcode-wrapper" class="mb-8">
+            <!-- Signature above QR -->
+            <h2 class="rock-salt font-bold text-lg text-zinc-800 uppercase tracking-tight mb-6">COACH CHRIS</h2>
+
+            <div id="qrcode-wrapper" class="mb-6">
                 <div id="qrcode"></div>
                 <div class="qr-logo-overlay">
                     <img src="https://raw.githubusercontent.com/CoachChrisCRC/app/df3580c5a17d646dc6813a283f7e85e269fece8e/CoachChrisCRC-AppIcon.png" alt="Logo">
                 </div>
             </div>
-            <h2 class="text-black font-black text-sm uppercase tracking-[0.2em] mb-3">Coach Chris CRC</h2>
-            <p class="text-zinc-500 text-[10px] font-bold uppercase tracking-[0.15em] leading-relaxed mb-8">
-                Scan QR Code
-            </p>
+            
+            <!-- Mirroring Main Page Text -->
+            <div class="flex flex-col items-center mb-6">
+                <h3 class="text-black font-[900] text-xl uppercase tracking-tighter mb-1">Chris Hedley</h3>
+                <p class="text-zinc-500 text-[10px] font-bold uppercase tracking-widest mb-3">Online Coach & PT</p>
+                
+                <div class="flex flex-col gap-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-zinc-400 mb-3 italic">
+                    <span>Circular Roots Coaching</span>
+                    <span>TRAIN UNCNVNTNL</span>
+                </div>
+                
+                <p class="text-[#808a5c] text-[10px] font-[900] uppercase tracking-[0.2em] mb-4">
+                    #FITTER #STRONGER #BETTER
+                </p>
+
+                <p class="text-zinc-400 text-[9px] font-bold uppercase tracking-[0.15em]">
+                    Scan QR Code to connect
+                </p>
+            </div>
+
             <button id="close-qr" class="w-full bg-zinc-100 text-zinc-600 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest active:scale-95 transition-transform">
                 Dismiss
             </button>
