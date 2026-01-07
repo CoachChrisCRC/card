@@ -147,39 +147,44 @@
             object-fit: cover;
         }
 
-        /* Install Banner Style */
+        /* Inconspicuous Top Install Banner Style */
         #install-banner {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #808a5c;
-            color: white;
-            padding: 12px 20px;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            color: #444;
+            padding: 6px 12px;
+            border-radius: 99px;
             z-index: 9000;
-            font-size: 11px;
-            font-weight: 900;
+            font-size: 10px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            justify-content: space-between;
+            letter-spacing: 0.5px;
+            justify-content: center;
             align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             animation: slideDownIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
         @keyframes slideDownIn {
-            from { transform: translateY(-100%); }
-            to { transform: translateY(0); }
+            from { transform: translate(-50%, -20px); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
         }
 
         #install-action-btn {
-            background: white;
-            color: #808a5c;
-            padding: 6px 14px;
+            background: #808a5c;
+            color: white;
+            padding: 4px 10px;
             border-radius: 99px;
-            font-size: 10px;
-            font-weight: 900;
+            font-size: 9px;
+            font-weight: 800;
+            white-space: nowrap;
         }
 
         /* Modal Styles */
@@ -229,10 +234,10 @@
 </head>
 <body>
 
-    <!-- Top Install Banner -->
+    <!-- Inconspicuous Top Install Banner -->
     <div id="install-banner">
-        <span>Get the full Coach Chris CRC experience</span>
-        <button id="install-action-btn">Install App</button>
+        <span>App Available</span>
+        <button id="install-action-btn">Install</button>
     </div>
 
     <!-- Splash Screen -->
